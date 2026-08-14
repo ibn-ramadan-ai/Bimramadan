@@ -1,6 +1,6 @@
 {
-  "name": "BIN RAMADAN Ai - Solar Energy & Water Pumps",
-  "description": "Integrated Solar Energy & Water Pumping Solutions for Agriculture in Egypt. Brand: BIN RAMADAN Ai | SOLAR ENERGY & WATER PUMPS | طلمبات وطاقة شمسية",
+  "name": "Ibn Ramadan Business OS",
+  "description": "Smart Business Platform & Solar Water Pumping Solutions powered by Ibn Ramadan, featuring Shakti Pumps official product integrations.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

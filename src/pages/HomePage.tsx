@@ -60,22 +60,58 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Left Column - Brand Positioning & CTAs */}
             <div className="lg:col-span-7 space-y-6">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-[#0B2E59] border border-amber-400/40 px-3.5 py-1.5 rounded-full text-xs font-bold text-sky-300 shadow-md">
+              <div className="inline-flex items-center gap-2.5 bg-[#0B2E59] border border-amber-400/50 px-4 py-2 rounded-full text-xs font-bold text-sky-300 shadow-lg flex-wrap">
                 <Sun className="w-4 h-4 text-amber-400" />
-                <span className="font-black tracking-wide text-amber-300">BIN RAMADAN Ai × SHAKTI PUMPS</span>
+                <span className="font-black tracking-wide text-amber-300">Ibn Ramadan Business OS</span>
+                <span className="text-slate-400 font-mono font-bold">•</span>
+                <span className="text-sky-300 font-extrabold">Shakti Pumps Partner</span>
               </div>
 
-              {/* Company Title */}
-              <div className="space-y-1">
-                <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white uppercase">
-                  BIN RAMADAN <span className="text-sky-400">Ai</span>
-                </h1>
-                <p className="text-lg sm:text-xl font-bold text-slate-300 tracking-wider">
-                  SOLAR ENERGY & WATER PUMPS
+              {/* Company Title & OS Branding */}
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white">
+                    Ibn Ramadan <span className="text-sky-400 font-extrabold">Business OS</span>
+                  </h1>
+                </div>
+                
+                <p className="text-xl sm:text-2xl font-bold text-amber-300 font-sans">
+                  منصة ذكية لإدارة الأعمال والعلاقات والعملاء
                 </p>
-                <p className="text-xl sm:text-2xl font-bold text-sky-400 font-sans pt-1">
-                  طلمبات وطاقة شمسية
+
+                <p className="text-base sm:text-lg font-bold text-slate-200 tracking-wider font-mono">
+                  Smart Business &amp; Solar Water Solutions
                 </p>
+
+                <div className="bg-[#0B2E59]/80 border-l-4 rtl:border-r-4 rtl:border-l-0 border-amber-400 p-3 rounded-r-xl rtl:rounded-l-xl rtl:rounded-r-none text-xs sm:text-sm space-y-1">
+                  <p className="font-bold text-sky-300">Powered by Ibn Ramadan</p>
+                  <p className="font-extrabold text-amber-400">Solar &amp; Water Solutions by Shakti Pumps</p>
+                </div>
+              </div>
+
+              {/* Shakti Pumps Official Quick Access Banner */}
+              <div className="flex items-center gap-3 bg-gradient-to-r from-amber-950/90 via-slate-900 to-slate-900 border border-amber-500/50 p-3 rounded-xl">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="shrink-0"
+                >
+                  <circle cx="50" cy="50" r="46" fill="#071A2B" stroke="#F59E0B" strokeWidth="4" />
+                  <path d="M25 50 L50 25 L75 50 L50 75 Z" fill="#F59E0B" />
+                  <path d="M50 35 L65 50 L50 65 L35 50 Z" fill="#FFFFFF" />
+                  <circle cx="50" cy="50" r="6" fill="#0B2E59" />
+                </svg>
+                <div className="text-xs">
+                  <span className="font-black text-amber-400 block uppercase font-sans">SHAKTI PUMPS SOLUTIONS</span>
+                  <span className="text-slate-300 text-[11px]">
+                    {isRtl
+                      ? 'مجهزة بمنتجات وحلول Shakti Pumps العالمية لضخ المياه بالطاقة الشمسية'
+                      : 'Integrated with official Shakti Pumps solar water pumping products'}
+                  </span>
+                </div>
               </div>
 
               {/* Main Positioning Slogan */}
@@ -156,64 +192,74 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* SHAKTI PUMPS BRAND FEATURED SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-[#071A2B] via-[#0B2E59] to-[#071A2B] border border-blue-800/80 rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div className="bg-gradient-to-br from-[#071A2B] via-[#0B2E59] to-[#071A2B] border border-amber-500/40 rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 bg-amber-950/80 border border-amber-500/40 px-3.5 py-1 rounded-full text-xs font-black text-amber-400">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>{isRtl ? 'حلول Shakti Pumps' : 'Shakti Pumps Range'}</span>
+                <span>OFFICIAL SHAKTI RANGE</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-black text-white">
-                {isRtl ? 'حلول ضخ متطورة من Shakti Pumps' : 'Advanced Solar Pumping Technology from Shakti Pumps'}
+              <h2 className="text-2xl sm:text-4xl font-black text-white">
+                Shakti Pumps Solar &amp; Water Solutions
               </h2>
 
-              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+              <p className="text-sm sm:text-base font-medium text-slate-200 leading-relaxed border-r-4 rtl:border-r-4 border-amber-400 pr-3 rtl:pr-3">
                 {isRtl
-                  ? 'نوفر حلول ضخ بالطاقة الشمسية ومعدات مختارة من مجموعة منتجات Shakti Pumps، مع تقديم الدعم الفني والاستشارات والحلول المناسبة لاحتياجات المشروعات الزراعية والمياه.'
-                  : 'We supply specialized solar water pumps and equipment from the Shakti Pumps product lineup, providing complete hydraulic engineering, custom system sizing, and technical support.'}
+                  ? 'حلول متكاملة لضخ المياه بالطاقة الشمسية والتطبيقات الزراعية والصناعية، مدعومة بتقنيات Shakti Pumps.'
+                  : 'Integrated solar water pumping solutions for agricultural and industrial applications, powered by Shakti Pumps technology.'}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <div className="bg-slate-900/70 p-3 rounded-xl border border-sky-800/40 text-xs">
-                  <span className="font-bold text-sky-300 block mb-1">
-                    {isRtl ? 'العلامة المصنعة' : 'Manufacturer Brand'}
+                <div className="bg-slate-900/80 p-3.5 rounded-xl border border-amber-500/30 text-xs">
+                  <span className="font-bold text-amber-300 block mb-1">
+                    {isRtl ? 'الهوية والحلول' : 'Platform & Technology'}
                   </span>
-                  <span className="text-slate-300 font-extrabold">Shakti Pumps Product Range</span>
+                  <span className="text-slate-200 font-extrabold block">
+                    Ibn Ramadan Business OS × Shakti Pumps
+                  </span>
                 </div>
-                <div className="bg-slate-900/70 p-3 rounded-xl border border-sky-800/40 text-xs">
+                <div className="bg-slate-900/80 p-3.5 rounded-xl border border-sky-500/30 text-xs">
                   <span className="font-bold text-sky-300 block mb-1">
-                    {isRtl ? 'الدعم والاستشارات' : 'Local Technical Support'}
+                    {isRtl ? 'التطبيقات والمجالات' : 'Applications'}
                   </span>
-                  <span className="text-slate-300 font-extrabold">BIN RAMADAN Ai Engineering</span>
+                  <span className="text-slate-200 font-extrabold block">
+                    {isRtl ? 'آبار عميقة • ري زراعي • طاقة شمسية' : 'Deep Wells • Solar Irrigation • Water Supply'}
+                  </span>
                 </div>
               </div>
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <button
-                  onClick={() => onNavigate('products')}
-                  className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 px-6 rounded-xl text-xs transition-all shadow-lg flex items-center gap-2"
+                  onClick={() => onNavigate('shakti-solutions')}
+                  className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3.5 px-6 rounded-xl text-xs sm:text-sm transition-all shadow-xl flex items-center gap-2"
                 >
-                  <span>{isRtl ? 'استكشف المنتجات' : 'Explore Products'}</span>
+                  <span>{isRtl ? 'استعراض حلول Shakti الكاملة' : 'Explore Full Shakti Solutions'}</span>
                   <ArrowIcon className="w-4 h-4" />
                 </button>
 
                 <button
                   onClick={() => onNavigate('tech-consultation')}
-                  className="bg-blue-900/80 hover:bg-blue-800 text-sky-300 border border-sky-400/40 font-bold py-3 px-6 rounded-xl text-xs transition-all"
+                  className="bg-blue-900/80 hover:bg-blue-800 text-sky-300 border border-sky-400/40 font-bold py-3.5 px-6 rounded-xl text-xs sm:text-sm transition-all"
                 >
-                  {isRtl ? 'اطلب استشارة فنية' : 'Request Technical Consultation'}
+                  {isRtl ? 'طلب استشارة ومطابقة بئر' : 'Request Hydraulic Assessment'}
                 </button>
               </div>
             </div>
 
             <div className="lg:col-span-5">
-              <SafeImage
-                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
-                alt="Shakti Pumps Solar Pumping Technology"
-                className="w-full h-64 sm:h-80 object-cover rounded-2xl border-2 border-amber-500/30 shadow-2xl"
-              />
+              <div className="relative rounded-2xl overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-slate-950">
+                <SafeImage
+                  src={products[0]?.image || "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"}
+                  alt="Shakti Pumps Solar Water Pumping Equipment"
+                  className="w-full h-72 sm:h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur p-3 rounded-xl border border-amber-500/30 text-xs text-amber-300 font-bold text-center">
+                  Shakti Pumps Official Solar Pumping Systems
+                </div>
+              </div>
             </div>
           </div>
         </div>

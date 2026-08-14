@@ -1,10 +1,18 @@
 export const BRAND_CONFIG = {
-  nameEn: "BIN RAMADAN Ai",
-  nameAr: "بن رمضان Ai",
+  nameEn: "Ibn Ramadan Business OS",
+  nameAr: "بن رمضان Business OS",
+  platformNameEn: "Ibn Ramadan Business OS",
+  platformNameAr: "ابن رمضان Business OS",
   taglineEn: "SOLAR ENERGY & WATER PUMPS",
   taglineAr: "طلمبات وطاقة شمسية", // MUST use طلمبات, NOT طرمبات
-  positioningEn: "Integrated Solar Energy & Water Pumping Solutions for Agriculture",
-  positioningAr: "حلول متكاملة للطاقة الشمسية وطلمبات المياه للقطاع الزراعي",
+  platformTaglineEn: "Smart Business & Solar Water Solutions",
+  platformTaglineAr: "منصة ذكية لإدارة الأعمال والعلاقات والحلول الشمسية",
+  coBrandPoweredEn: "Powered by Ibn Ramadan",
+  coBrandPoweredAr: "Powered by Ibn Ramadan",
+  coBrandShaktiEn: "Solar & Water Solutions by Shakti Pumps",
+  coBrandShaktiAr: "Solar & Water Solutions by Shakti Pumps",
+  positioningEn: "Smart Business & Solar Water Pumping Solutions for Agricultural & Industrial Sectors",
+  positioningAr: "منصة ذكية لإدارة الأعمال والعلاقات مع حلول متكاملة لطلمبات المياه والطاقة الشمسية",
 
   colors: {
     darkNavy: "#071A2B",

@@ -41,22 +41,38 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onNavigate }) => {
           <div className="space-y-4">
             <BrandLogo variant="full" size="lg" showArabicSubtext={true} />
 
-            <p className="text-xs text-slate-300 leading-relaxed pt-2">
-              {isRtl ? BRAND_CONFIG.positioningAr : BRAND_CONFIG.positioningEn}
+            {/* Shakti Pumps Official Badge */}
+            <div className="flex items-center gap-3 bg-gradient-to-r from-amber-950/90 via-slate-900 to-amber-950/90 p-3 rounded-2xl border border-amber-500/50 shadow-md">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="shrink-0"
+              >
+                <circle cx="50" cy="50" r="46" fill="#071A2B" stroke="#F59E0B" strokeWidth="4" />
+                <path d="M25 50 L50 25 L75 50 L50 75 Z" fill="#F59E0B" />
+                <path d="M50 35 L65 50 L50 65 L35 50 Z" fill="#FFFFFF" />
+                <circle cx="50" cy="50" r="6" fill="#0B2E59" />
+              </svg>
+              <div className="flex flex-col text-left">
+                <span className="font-black text-amber-400 text-xs tracking-wider uppercase font-sans">
+                  SHAKTI PUMPS
+                </span>
+                <span className="text-[10px] text-slate-200 font-bold tracking-wide">
+                  Solar &amp; Water Solutions Partner
+                </span>
+              </div>
+            </div>
+
+            <p className="text-xs font-bold text-sky-300 tracking-wide">
+              Smart Business Platform &amp; Solar Water Solutions
             </p>
 
-            <div className="p-3 bg-[#0B2E59]/80 border border-sky-400/40 rounded-xl text-xs space-y-1 text-slate-200">
-              <div className="font-extrabold text-amber-300 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-amber-400" />
-                <span>BIN RAMADAN Ai × SHAKTI PUMPS</span>
-              </div>
-              <p className="text-[11px] text-slate-300">
-                {isRtl ? 'حلول الطاقة الشمسية وطلمبات المياه' : 'Solar Energy & Water Pumping Solutions'}
-              </p>
-              <p className="text-[11px] font-medium text-slate-400">
-                {isRtl ? 'منتجات Shakti Pumps | تقديم ودعم فني بواسطة بن رمضان Ai' : 'Shakti Pumps Products | Presented & Supported by BIN RAMADAN Ai'}
-              </p>
-            </div>
+            <p className="text-xs text-slate-300 leading-relaxed">
+              {isRtl ? BRAND_CONFIG.positioningAr : BRAND_CONFIG.positioningEn}
+            </p>
           </div>
 
           {/* Col 2: Quick Links */}

@@ -21,6 +21,7 @@ import { CompanyProfilePage } from './pages/CompanyProfilePage';
 import { DownloadsPage } from './pages/DownloadsPage';
 import { ContactPage } from './pages/ContactPage';
 import { AdminDashboard } from './pages/AdminDashboard';
+import { ShaktiSolutionsPage } from './pages/ShaktiSolutionsPage';
 
 export default function App() {
   const [currentLang, setCurrentLang] = useState<Language>('ar');
@@ -48,6 +49,9 @@ export default function App() {
     switch (currentPage) {
       case 'home':
         document.title = titleSuffix;
+        break;
+      case 'shakti-solutions':
+        document.title = `${isRtl ? 'حلول Shakti Pumps' : 'Shakti Solar & Water Solutions'} - ${titleSuffix}`;
         break;
       case 'about':
         document.title = `${isRtl ? 'عن الشركة' : 'About Us'} - ${titleSuffix}`;
@@ -127,6 +131,15 @@ export default function App() {
             onNavigate={handleNavigate}
             onSelectProductForQuote={handleSelectProductForQuote}
             onOpenConsultationWithData={handleOpenConsultationWithData}
+          />
+        )}
+
+        {currentPage === 'shakti-solutions' && (
+          <ShaktiSolutionsPage
+            currentLang={currentLang}
+            products={products}
+            onNavigate={handleNavigate}
+            onSelectProductForQuote={handleSelectProductForQuote}
           />
         )}
 

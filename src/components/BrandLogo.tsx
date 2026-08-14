@@ -131,14 +131,14 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         <div className="flex flex-col text-left rtl:text-right">
           <div className="flex items-center gap-1.5 flex-wrap">
             <span className={`font-black tracking-tight text-white ${currentSize.fontTitle}`}>
-              BIN RAMADAN
+              Ibn Ramadan
             </span>
-            <span className="bg-gradient-to-r from-blue-500 to-sky-400 text-white text-[10px] font-black px-1.5 py-0.5 rounded shadow-sm border border-blue-400/30">
-              Ai
+            <span className="bg-gradient-to-r from-sky-500 via-blue-600 to-amber-500 text-white text-[10px] font-black px-1.5 py-0.5 rounded shadow-sm border border-sky-400/40 tracking-wider">
+              Business OS
             </span>
           </div>
-          <span className={`font-semibold tracking-wider text-slate-300 uppercase ${currentSize.fontSub}`}>
-            {BRAND_CONFIG.taglineEn}
+          <span className={`font-semibold tracking-wider text-amber-400 uppercase ${currentSize.fontSub}`}>
+            {BRAND_CONFIG.coBrandShaktiEn}
           </span>
           {showArabicSubtext && (
             <span className="text-[11px] font-bold text-sky-400 font-sans tracking-normal">

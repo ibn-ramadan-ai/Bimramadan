@@ -44,12 +44,14 @@ export const Navbar: React.FC<NavbarProps> = ({
       label: isRtl ? 'الحلول والمنتجات' : 'Solutions & Products',
       isDropdown: true,
       children: [
+        { id: 'shakti-solutions', label: isRtl ? 'حلول Shakti Pumps' : 'Shakti Solar Solutions', icon: Sun },
         { id: 'solar-pumps', label: text.navSolarPumps, icon: Droplets },
         { id: 'solar-energy', label: text.navSolarEnergy, icon: Sun },
         { id: 'products', label: text.navProducts, icon: FileText },
         { id: 'agri-solutions', label: text.navAgriSolutions, icon: Calculator },
       ],
     },
+    { id: 'shakti-solutions', label: isRtl ? 'حلول Shakti' : 'Shakti Solutions' },
     { id: 'services', label: text.navServices },
     { id: 'projects', label: text.navProjects },
     { id: 'downloads', label: text.navDownloads },
@@ -153,10 +155,30 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <BrandLogo variant="full" size="md" showArabicSubtext={true} />
           </button>
-          <div className="hidden lg:flex items-center gap-1.5 bg-gradient-to-r from-blue-950/90 to-slate-900 border border-amber-500/40 px-3 py-1.5 rounded-xl text-xs font-black shadow-inner">
-            <span className="text-white">BIN RAMADAN Ai</span>
-            <span className="text-amber-400 font-mono font-bold">×</span>
-            <span className="text-amber-400">SHAKTI PUMPS</span>
+          
+          {/* Shakti Pumps Official Logo Co-Brand Badge */}
+          <div className="hidden lg:flex items-center gap-2.5 bg-gradient-to-r from-amber-950/90 via-slate-900 to-amber-900/90 px-3.5 py-1.5 rounded-xl border border-amber-500/50 shadow-md">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="shrink-0"
+            >
+              <circle cx="50" cy="50" r="46" fill="#071A2B" stroke="#F59E0B" strokeWidth="4" />
+              <path d="M25 50 L50 25 L75 50 L50 75 Z" fill="#F59E0B" />
+              <path d="M50 35 L65 50 L50 65 L35 50 Z" fill="#FFFFFF" />
+              <circle cx="50" cy="50" r="6" fill="#0B2E59" />
+            </svg>
+            <div className="flex flex-col text-left">
+              <span className="font-black tracking-wider text-amber-400 text-xs font-sans uppercase">
+                SHAKTI PUMPS
+              </span>
+              <span className="text-[9px] font-extrabold text-slate-300 tracking-wider">
+                Solar &amp; Water Solutions
+              </span>
+            </div>
           </div>
         </div>
 
